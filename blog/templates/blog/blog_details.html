@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="container mt-5">
+<div class="row row-cols-1 row-cols-md-1 g-4">
+  <div class="col">
+    <div class="content text-white bg-dark p-2">
+      <h3>{{ post.title }}</h3>
+      <p>Created: {{ post.created.date }}</p>
+      <p>{{ post.content }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="comment row-cols-1 row-cols-md-4 g-4 mt-2">
+  <h3 class="text-white p-2">Leave a comment:</h3>
+    <form method="post">
+      {% csrf_token %}
+      <div class="author">
+          {{ form.author }}
+      </div><br>
+
+      <div>
+          {{ form.body }}
+      </div><br>
+      <button type="submit" class="blog-btn btn btn-success">Submit Your Thoughts</button>
+    </form><br>
+
+  <h3 class="text-white">Comments:</h3>
+  {% for comment in comments %}
+    <p class="text-white">
+      On {{ comment.created_on.date }} <b>{{ comment.author }}</b> wrote:
+    </p>
+    <h5 class=" text-success">
+      {{ comment.body | linebreaks }}
+    </h5>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}

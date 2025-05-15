@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SADDAM - Home
+{% endblock %}
+
+{% block content %}
+    <div class="home">
+      <div class="home-img">
+        <img src="static/images/me2.png" alt="" />
+      </div>
+
+      <div class="home-content">
+        <h1>Hi, This is <span>SADDAM HOSEN...</span></h1>
+        <h3 class="typing-text">A <span class="auto-type"></span></h3>
+
+        <!-- Social Links -->
+        <div class="social-icon">
+          <a href="https://www.linkedin.com" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Saddamhosen54"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/saddam54h"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/saddam54h"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <a href="{% url 'contact' %}" class="hire">Hire me</a>
+        <center><p class="text-white mt-4">&copy;2025, SADDAM HOSEN. All rights reserved</p></center>
+      </div>
+    </div>
+{% endblock %}
