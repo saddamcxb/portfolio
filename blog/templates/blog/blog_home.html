@@ -10,7 +10,7 @@ SADDAM - Blog
 {% for post in posts %}
 <div class="jumbotron jumbotron-fluid border-bottom mt-2 p-4">
   <div class="container-fluid text-white mb-2">
-    <h1 class="display-4"><span>{{post.title}}</span></h1>
+    <h3 style="font-size: 35px; font-weight: bold;" class="display-4"><span>{{post.title}}</span></h3>
     <p class="lead">{{ post.content | slice:":300" }}...</p>
     <a class="btn btn-primary" href="{% url 'blog_detail' post.slug %}" role="button">Read more</a>
   </div>

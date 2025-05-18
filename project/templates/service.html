@@ -10,10 +10,10 @@ SADDAM - Projects
   {% for service in services %}
   <div class="col">
     <div class="card h-100 text-white mt-5" style="background-color: black; border-radius: 15px; box-shadow: 0 0 10px teal;">
-      <img class="card-img-top" src="{{ service.img.url }}" alt="">
+      <img class="card-img-top" src="{{ service.img.url }}" alt="" style="padding: 5px; border-radius: 15px;">
       <div class="card-body">
         <h1 class="card-title text-center">{{ service.title}}</h1>
-        <p class="card-text">{{ service.desc | slice:":150" }}...</p>
+        <p class="card-text">{{ service.desc }}</p>
       </div>
     </div>
   </div>

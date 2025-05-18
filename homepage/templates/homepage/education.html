@@ -9,12 +9,12 @@ SADDAM - Education
 <div class="row row-cols-1 row-cols-md-3 g-3">
     {% for edu in education %}
     <div class="col">
-        <div class="card p-3 mt-4 text-center" style="background-color: black; border-radius: 15px; box-shadow: 0 0 10px rgba(12, 61, 135, 0.679);">
-            <h1 class="card-text" style="color: #b74b4b;">{{ edu.degree }}</h1>
+        <div class="card p-3 mt-4" style="background-color: black; border-radius: 15px; box-shadow: 0 0 10px rgba(12, 61, 135, 0.679);">
+            <h2 class="card-text" style="color: #b74b4b;">{{ edu.degree }}</h2>
             <h4 class="text-white">Subject: {{ edu.subject }}</h4>
             <h4 class="text-white">From: {{ edu.start_date }}</h4>
             <h4 class="text-white">Till: {{ edu.end_date }}</h4>
-            <h4 class="text-white">Institution Name:</h4><a href="{{edu.institution_url }}" style="font-size: 25px; color: rgb(12, 180, 68); text-decoration: underline;">{{ edu.institution }}</a>
+            <h4 class="text-white">From the institution of ==></h4><a class="text-center" href="{{edu.institution_url }}" style="font-size: 25px; color: rgb(12, 180, 68); text-decoration: underline;" target="blank">{{ edu.institution }}</a>
         </div>
         
     </div>

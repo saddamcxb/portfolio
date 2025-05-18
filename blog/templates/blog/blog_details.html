@@ -12,7 +12,7 @@
     <div class="content text-white bg-dark p-2">
       <h3>{{ post.title }}</h3>
       <p>Created: {{ post.created.date }}</p>
-      <p>{{ post.content }}</p>
+      <p>{{ post.content|linebreaks }}</p>
     </div>
   </div>
 </div>
